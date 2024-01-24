@@ -2,12 +2,14 @@
 // All packages except `@mantine/hooks` require styles imports
 import '@mantine/core/styles.css';
 
-import { ColorSchemeScript, MantineProvider } from '@mantine/core';
+import { ColorSchemeScript, Container, MantineProvider,SimpleGrid } from '@mantine/core';
+import LeftBar from './components/leftMenu';
+import TopBar from './components/topBat';
 
-export const metadata = {
-  title: 'My Mantine app',
-  description: 'I have followed setup instructions carefully',
-};
+// export const metadata = {
+//   title: 'My Mantine app',
+//   description: 'I have followed setup instructions carefully',
+// };
 
 export default function RootLayout({
   children,
@@ -19,8 +21,22 @@ export default function RootLayout({
       <head>
         <ColorSchemeScript />
       </head>
-      <body>
-        <MantineProvider>{children}</MantineProvider>
+      <body className='layout'>
+          <TopBar/>
+       
+        
+    
+        <MantineProvider>
+        
+       
+        
+        
+        
+      <div>{children}</div>
+  
+  
+                 
+         </MantineProvider>
       </body>
     </html>
   );

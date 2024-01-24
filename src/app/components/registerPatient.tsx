@@ -45,7 +45,7 @@ export default function RegisterPateint() {
   
 
 
-  const handleSubmit =async (event) => {
+  const handleSubmit =async (event:React.FormEvent) => {
     event.preventDefault();
     const values = form.values;
     const dob = dayjs(values.dayOfBirth).format('YYYY-MM-DD');
